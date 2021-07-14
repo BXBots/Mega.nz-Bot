@@ -78,7 +78,7 @@ async def megadl(_, message: Message):
         if not guessedfilemime.mime:
             await download_msg.edit("**Trying to Upload Now!** \n\n**Error:** `Can't Get File Mime Type! Sending as a Document!`")
             await message.reply_document(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @BX_Botz If You're Enjoying This Bot**")
             shutil.rmtree(basedir + "/" + userpath)
             print(e)
             return
@@ -87,34 +87,34 @@ async def megadl(_, message: Message):
         if "image/gif" in filemimespotted:
             await download_msg.edit("**Trying to Upload Now!**")
             await message.reply_animation(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @BX_Botz If You're Enjoying This Bot**")
             shutil.rmtree(basedir + "/" + userpath)
             return
         # Checking if it's a image
         if "image" in filemimespotted:
             await download_msg.edit("**Trying to Upload Now!**")
             await message.reply_photo(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @BX_Botz If You're Enjoying This Bot**")
         # Checking if it's a video
         elif "video" in filemimespotted:
             viddura = moviepy.editor.VideoFileClip(f"{magapylol}")
             vidduration = int(viddura.duration)
             if "!streamable" in url:
                 await message.reply_video(magapylol, duration=vidduration, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-                await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+                await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @BX_Botz If You're Enjoying This Bot**")
             else:
                 await message.reply_document(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-                await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+                await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @BX_Botz If You're Enjoying This Bot**")
         # Checking if it's a audio
         elif "audio" in filemimespotted:
             await download_msg.edit("**Trying to Upload Now!**")
             await message.reply_audio(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @BX_Botz If You're Enjoying This Bot**")
         # If it's not a image/video or audio it'll reply it as doc
         else:
             await download_msg.edit("**Trying to Upload Now!**")
             await message.reply_document(magapylol, progress=progress_for_pyrogram, progress_args=("**Trying to Upload Now!** \n", download_msg, start_time))
-            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @NexaBotsUpdates If You're Enjoying This Bot**")
+            await download_msg.edit(f"**Successfully Uploaded** \n\n**Join @BX_Botz If You're Enjoying This Bot**")
     try:
         shutil.rmtree(basedir + "/" + userpath)
         print("Successfully Removed Downloaded File and the folder!")
